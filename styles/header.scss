@@ -1,0 +1,104 @@
+.mainHeader {
+  nav {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    button {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    item {
+      position: relative;
+      display: block;
+    }
+    item:hover .openList {
+      transform: scaleY(1);
+    }
+    .openList {
+      transition: 0.5s transform;
+      transform-origin: top;
+      transform: scaleY(0);
+      position: absolute;
+      top: 20px;
+      margin: 8px 8px 0 0;
+      p {
+        font-size: 14px;
+      }
+    }
+    .mainHeaderBtn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+.mainHeaderTitle {
+  margin: 27px 0;
+  h1 {
+    text-align: center;
+    font-family: "rubik";
+    font-style: initial;
+    font-weight: 400;
+    letter-spacing: -2.25px;
+    font-size: 100px;
+    background: -webkit-linear-gradient(
+      257.59deg,
+      rgba(40, 40, 96, 0.85) -52.11%,
+      rgba(229, 25, 77, 0.85) 28.72%,
+      rgba(255, 154, 179, 0.85) 117.53%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    b {
+      font-family: "rubikBold";
+    }
+  }
+  p {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1400px) {
+  .mainHeader {
+    nav {
+      button {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mainHeader {
+    nav {
+      gap: 25px;
+      justify-content: right;
+      overflow-x: scroll;
+      flex-wrap: nowrap;
+      padding: 0 1rem;
+
+      button {
+        white-space: nowrap;
+        font-size: 16px;
+      }
+
+      & {
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        scrollbar-width: none; /* Firefox */
+      }
+      &::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+      }
+    }
+  }
+
+  .mainHeaderTitle {
+    margin: 27px 0;
+    h1 {
+      font-size: 60px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "rubik";
+  src: url("/Rubik.woff2") format("woff2");
+}
+@font-face {
+  font-family: "rubikBold";
+  src: url("/RubikBold.woff2") format("woff2");
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input[type="text"],
+select,
+textarea {
+  outline: none;
+  border: none;
+  font-family: inherit;
+  background-color: inherit;
+  color: inherit;
+}
