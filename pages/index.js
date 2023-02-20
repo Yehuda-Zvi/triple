@@ -1,3 +1,4 @@
+import CatCard from "@/components/CatCard"
 import PrdctCard from "@/components/PrdctCard"
 import Title from "@/components/Title"
 import css from "@/styles/index.module.scss"
@@ -34,6 +35,21 @@ export default function Home() {
           return <PrdctCard {...prdct} />
         })}
       </div>
+      <div style={{ height: "3rem" }} />
+
+      <div className={css.wrapFavorits}>
+        <Title {...catsTitle} />
+      </div>
+      <div className={css.wrapCatCard}>
+        <CatCard />
+        <CatCard />
+        <CatCard />
+        <CatCard />
+        <CatCard />
+        <CatCard />
+        <CatCard />
+        <CatCard />
+      </div>
     </>
   )
 }
@@ -42,6 +58,12 @@ const favoritsTitle = {
   h2: "המומלצים שלנו",
   txt: "הסיפור העממי הוא ביסודו שמיעתי, נמסר מדור לדור על ידי מסרנים. המסרנים הצטיינו בזיכרון מעולה ובכושר משחק. פעולת העברת הסיפור נקראת היגוד, והיא נעשתה בפני קהל, בסיטואציה עממית (משפחה, בית-ספר, וכדומה)",
   icon: "/icons/gift.svg",
+}
+
+const catsTitle = {
+  h2: "קטגוריות",
+  txt: "הסיפור העממי הוא ביסודו שמיעתי, נמסר מדור לדור על ידי מסרנים. המסרנים הצטיינו בזיכרון מעולה ובכושר משחק. פעולת העברת הסיפור נקראת היגוד, והיא נעשתה בפני קהל, בסיטואציה עממית ",
+  icon: "/icons/cat.svg",
 }
 
 const prdct = {
