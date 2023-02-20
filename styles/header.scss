@@ -1,7 +1,9 @@
 .mainHeader {
+  padding: 8px 0 40px;
+  background-color: #fff;
   nav {
     display: flex;
-    gap: 25px;
+    gap: 22px;
     justify-content: center;
     button {
       font-size: 16px;
@@ -80,12 +82,13 @@
 
 @media (max-width: 600px) {
   .mainHeader {
+    padding: 2px 0;
     nav {
       display: none;
     }
   }
   .mainHeaderTitle {
-    margin: 27px 0 24px;
+    padding: 24px 0;
     h1 {
       font-size: 60px;
     }
