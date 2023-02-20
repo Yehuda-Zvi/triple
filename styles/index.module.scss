@@ -80,7 +80,16 @@
 }
 
 @media (max-width: 600px) {
+  .wrap {
+    margin: 0rem 0 3rem;
+  }
+
   .heroTxt {
     font-size: 34px;
+  }
+
+  .btns3 {
+    align-items: center;
+    flex-direction: column;
   }
 }
