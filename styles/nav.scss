@@ -39,17 +39,69 @@
 }
 
 .navIcon,
-.mobileNav {
+.mobileNav,
+.websiteTitle {
   display: none;
 }
+
+// MOBILE *********
 
 @media (max-width: 600px) {
   .navDesktop {
     display: none;
   }
   .mobileNav {
-    display: initial;
+    display: block;
     color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+  }
+
+  .mainNavItems {
+    background-color: #fff;
+    color: #393939;
+
+    p {
+      display: flex;
+      color: #000 !important;
+      // border-bottom: #eee thin solid !important;
+      align-items: center;
+      gap: 8px;
+      margin: 0 40px;
+      padding: 18px 0 14px;
+    }
+  }
+
+  .boxNav {
+    max-height: 0;
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s all;
+    position: relative;
+    padding-bottom: 8px;
+
+    a {
+      display: block;
+      padding: 8px;
+      margin: 0 56px;
+    }
+  }
+  .openBoxNav {
+    max-height: 100px;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .secondryNavItems {
+    background-color: #393939;
+    a {
+      display: block;
+      padding: 1rem 0;
+      margin: 0 40px;
+      border-bottom: #424245 thin solid;
+      color: #eee;
+    }
   }
 
   .headerNavMobile {
@@ -63,30 +115,31 @@
   }
 
   .mobileNavOpener {
-    background-color: #111;
     position: absolute;
     top: 48px;
     transform: scaleY(0);
-    overflow: hidden;
+    overflow-y: scroll;
+    height: calc(100vh - 48px);
+
     z-index: -1;
     width: 100%;
     transition: 0.3s all;
     transform-origin: top;
-
-    p {
-      padding: 1rem 0;
-      margin: 0 40px;
-      border-bottom: #424245 thin solid;
-      color: #eee;
-    }
   }
 
-  .navBlack {
-    background-color: #111;
-  }
   .openNav {
     transform: scaleY(1);
     z-index: 9999;
+  }
+
+  .websiteTitle {
+    background-color: #393939;
+    text-align: center;
+    padding: 12px 0 10px;
+    border-bottom: none;
+    color: #fff;
+    display: block;
+    margin-top: 48px;
   }
 
   // HANBURGER

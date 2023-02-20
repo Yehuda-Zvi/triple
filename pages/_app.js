@@ -4,7 +4,6 @@ import "@/styles/globals.scss"
 import "@/styles/nav.scss"
 import "@/styles/header.scss"
 import { Assistant } from "@next/font/google"
-// Rubik
 const asis = Assistant({ subsets: ["latin"] })
 
 export default function App({ Component, pageProps }) {

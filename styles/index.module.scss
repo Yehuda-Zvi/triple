@@ -1,0 +1,86 @@
+.wrap {
+  margin: 2rem 0 3rem;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 0 2rem;
+
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-image: url("/hero.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: brightness(0.7);
+  }
+}
+
+.heroTxt {
+  font-size: 84px;
+  font-weight: 600;
+}
+
+.dots3 {
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 40px;
+  }
+}
+.search {
+  display: grid;
+  grid-template-columns: 1fr 40px;
+  width: 320px;
+  margin: 2rem auto;
+  padding: 4px 4px 4px 0px;
+
+  border: 2px #fff solid;
+  border-radius: 50px;
+  input {
+    background-color: transparent;
+    font-size: 18px;
+    padding-right: 1rem;
+  }
+  img {
+    border-radius: 50%;
+    background-color: #fff;
+    width: 36px;
+    padding: 6px;
+  }
+}
+
+.btns3 {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  padding: 2rem 0;
+
+  :nth-child(1) {
+    background-color: #e5194d;
+  }
+  :nth-child(2) {
+    background-color: #282860;
+  }
+  :nth-child(3) {
+    background-color: #000;
+  }
+
+  button {
+    font-size: 20px;
+    border-radius: 50px;
+    width: 260px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroTxt {
+    font-size: 34px;
+  }
+}

@@ -10,6 +10,7 @@
     item {
       position: relative;
       display: block;
+      cursor: pointer;
     }
     item:hover .openList {
       transform: scaleY(1);
@@ -19,9 +20,15 @@
       transform-origin: top;
       transform: scaleY(0);
       position: absolute;
-      top: 20px;
-      margin: 8px 8px 0 0;
+      top: 16px;
+      right: 0px;
+      background-color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      z-index: 2;
+
       p {
+        padding: 8px 0;
         font-size: 14px;
       }
     }
@@ -33,7 +40,7 @@
   }
 }
 .mainHeaderTitle {
-  margin: 27px 0;
+  margin: 12px 0;
   h1 {
     text-align: center;
     font-family: "rubik";
@@ -65,7 +72,7 @@
   .mainHeader {
     nav {
       button {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
   }
@@ -74,27 +81,9 @@
 @media (max-width: 600px) {
   .mainHeader {
     nav {
-      gap: 25px;
-      justify-content: right;
-      overflow-x: scroll;
-      flex-wrap: nowrap;
-      padding: 0 1rem;
-
-      button {
-        white-space: nowrap;
-        font-size: 16px;
-      }
-
-      & {
-        -ms-overflow-style: none; /* Internet Explorer 10+ */
-        scrollbar-width: none; /* Firefox */
-      }
-      &::-webkit-scrollbar {
-        display: none; /* Safari and Chrome */
-      }
+      display: none;
     }
   }
-
   .mainHeaderTitle {
     margin: 27px 0;
     h1 {
