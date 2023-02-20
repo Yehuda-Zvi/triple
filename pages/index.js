@@ -45,7 +45,7 @@ const favoritsTitle = {
 }
 
 const prdct = {
-  name: "הסיפור תמיד ולעולם לא היהי העממי הוא ביסודו שמיעתי",
+  name: "הסיפור העממי הוא ביסודו שמיעתי",
   price: 120,
   img: {
     alt: "",
