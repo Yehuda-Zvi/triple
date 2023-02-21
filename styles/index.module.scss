@@ -82,6 +82,19 @@
   }
 }
 
+@media (max-width: 600px) {
+  .heroTxt {
+    font-size: 34px;
+  }
+
+  .btns3 {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+// CARDS
+
 .wrapPrdcts {
   display: flex;
   flex-wrap: wrap;
@@ -97,49 +110,28 @@
   }
 }
 
-@media (max-width: 600px) {
-  .heroTxt {
-    font-size: 34px;
-  }
-
-  .btns3 {
-    align-items: center;
-    flex-direction: column;
-  }
-  .wrapPrdcts {
-    justify-content: initial;
-    margin: 1rem 0;
-    padding: 1rem 2rem;
-    overflow-x: scroll;
-    flex-wrap: nowrap;
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Hide scrollbar for IE, Edge and Firefox */
-    & {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-  }
-}
-
 // NEW GRID STYLE
 
 .wrapCatCard,
 .wrapBigCatCard {
   max-width: 1400px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   > div {
     height: 340px;
   }
   margin: 0 auto;
   gap: 1rem;
-  padding: 2rem 1rem;
+  padding: 2rem;
   justify-items: center;
 }
+.wrapBigCatCard {
+  grid-template-columns: repeat(3, 1fr);
+  > div {
+    height: 300px;
+  }
+}
+
 @media (max-width: 1400px) {
   .wrapCatCard,
   .wrapBigCatCard {
@@ -152,46 +144,46 @@
 @media (max-width: 600px) {
   .wrapCatCard {
     max-width: 100%;
-    grid-template-columns: 180px 180px 180px 180px;
+    grid-template-columns: repeat(4, 170px);
+
     > div {
-      height: 260px;
+      height: 255px;
     }
     overflow-x: scroll;
   }
-}
 
-.wrapBigCatCard {
-  grid-template-columns: 1fr 1fr 1fr;
-  > div {
-    height: 300px;
-  }
-}
-@media (max-width: 600px) {
   .wrapBigCatCard {
     max-width: 100%;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: repeat(3, 250px);
     > div {
       height: 200px;
     }
 
     overflow-x: scroll;
   }
+
+  .wrapPrdcts {
+    justify-content: initial;
+    margin: 1rem 0;
+    padding: 1rem 2rem;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
 }
 
-// .wrapBigCatCard {
-//   max-width: 1200px;
-//   display: grid;
-//   grid-template-columns: 1fr 1fr 1fr;
-//   grid-template-rows: 300px;
-//   margin: 0 auto;
-//   gap: 1rem;
-//   padding: 2rem 1rem;
-//   justify-items: center;
-// }
-// @media (max-width: 600px) {
-//   .wrapBigCatCard {
-//     grid-template-columns: 250px 250px 250px;
-//     grid-template-rows: 200px;
-//     overflow-x: scroll;
-//   }
-// }
+@media (max-width: 600px) {
+  .wrapPrdcts,
+  .wrapBigCatCard,
+  .wrapCatCard {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
