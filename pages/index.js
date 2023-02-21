@@ -1,3 +1,4 @@
+import BigCatCard from "@/components/BigCatCard"
 import CatCard from "@/components/CatCard"
 import PrdctCard from "@/components/PrdctCard"
 import Title from "@/components/Title"
@@ -50,6 +51,38 @@ export default function Home() {
         <CatCard />
         <CatCard />
       </div>
+
+      <div style={{ height: "3rem" }} />
+
+      <div className={css.wrapFavorits}>
+        <Title {...whatNewTitle} />
+      </div>
+      <div className={css.wrapPrdcts}>
+        {[prdct, prdct, prdct, prdct, prdct].map((prdct) => {
+          return <PrdctCard {...prdct} />
+        })}
+      </div>
+
+      <div style={{ height: "3rem" }} />
+      <div className={css.wrapFavorits}>
+        <Title {...packageTitle} />
+      </div>
+      <div className={css.wrapCatCard}>
+        <CatCard />
+        <CatCard />
+        <CatCard />
+        <CatCard />
+      </div>
+
+      <div style={{ height: "3rem" }} />
+      <div className={css.wrapFavorits}>
+        <Title {...tagTitle} />
+      </div>
+      <div className={css.wrapBigCatCard}>
+        <BigCatCard />
+        <BigCatCard />
+        <BigCatCard />
+      </div>
     </>
   )
 }
@@ -64,6 +97,24 @@ const catsTitle = {
   h2: "קטגוריות",
   txt: "הסיפור העממי הוא ביסודו שמיעתי, נמסר מדור לדור על ידי מסרנים. המסרנים הצטיינו בזיכרון מעולה ובכושר משחק. פעולת העברת הסיפור נקראת היגוד, והיא נעשתה בפני קהל, בסיטואציה עממית ",
   icon: "/icons/cat.svg",
+}
+
+const whatNewTitle = {
+  h2: "מה חדש",
+  txt: "הסיפור העממי הוא ביסודו שמיעתי, נמסר מדור לדור על ידי מסרנים. המסרנים הצטיינו בזיכרון מעולה ובכושר משחק. פעולת העברת הסיפור נקראת היגוד, והיא נעשתה בפני קהל, בסיטואציה עממית ",
+  icon: "/icons/star.svg",
+}
+
+const packageTitle = {
+  h2: "ערכות לזוגיות משתלמת",
+  txt: "הסיפור העממי הוא ביסודו שמיעתי, נמסר מדור לדור על ידי מסרנים. המסרנים הצטיינו בזיכרון מעולה ובכושר משחק. פעולת העברת הסיפור נקראת היגוד, והיא נעשתה בפני קהל, בסיטואציה עממית ",
+  icon: "/icons/box.svg",
+}
+
+const tagTitle = {
+  h2: "מוצרי אהבה לפי מחיר",
+  txt: "הסיפור העממי הוא ביסודו שמיעתי, נמסר מדור לדור על ידי מסרנים. המסרנים הצטיינו בזיכרון מעולה ובכושר משחק. פעולת העברת הסיפור נקראת היגוד, והיא נעשתה בפני קהל, בסיטואציה עממית ",
+  icon: "/icons/tag.svg",
 }
 
 const prdct = {
